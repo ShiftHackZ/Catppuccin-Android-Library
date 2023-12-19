@@ -13,9 +13,8 @@
         android:theme="@style/Theme.Catppuccin"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".CatppuccinActivity"
             android:exported="true"
-            android:label="@string/app_name"
             android:theme="@style/Theme.Catppuccin">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
