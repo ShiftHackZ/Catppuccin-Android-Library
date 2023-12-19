@@ -27,7 +27,7 @@ import com.shifthackz.catppuccin.palette.CatppuccinPalette
 fun ButtonsExample(
     palette: CatppuccinPalette,
 ) {
-    CatppuccinTheme(palette = palette) {
+    CatppuccinTheme.Palette(palette = palette) {
         Surface(
             modifier = Modifier.fillMaxSize(),
             color = MaterialTheme.colorScheme.background,

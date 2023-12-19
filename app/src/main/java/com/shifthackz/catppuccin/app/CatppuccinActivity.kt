@@ -7,20 +7,31 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import com.shifthackz.catppuccin.app.ui.ButtonsExample
-import com.shifthackz.catppuccin.app.ui.TypographyExample
 import com.shifthackz.catppuccin.palette.Catppuccin
 import com.shifthackz.catppuccin.compose.CatppuccinTheme
+import com.shifthackz.catppuccin.palette.CatppuccinPalette
 
-class MainActivity : ComponentActivity() {
+class CatppuccinActivity : ComponentActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            CatppuccinTheme {
+            var palette by remember {
+                mutableStateOf<CatppuccinPalette>(Catppuccin.Latte)
+            }
+            CatppuccinTheme.Palette(
+                palette = palette,
+            ) {
+                palette = Catppuccin.Mocha
                 Surface {
                     ButtonsExample(
-                        palette = Catppuccin.Latte,
+                        palette = palette,
                     )
                 }
             }
@@ -39,4 +50,3 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
         )
     }
 }
-
