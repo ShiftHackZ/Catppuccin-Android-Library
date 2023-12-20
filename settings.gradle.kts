@@ -3,6 +3,7 @@ pluginManagement {
         google()
         mavenCentral()
         gradlePluginPortal()
+        maven { setUrl("https://jitpack.io") }
     }
 }
 dependencyResolutionManagement {
@@ -17,3 +18,4 @@ rootProject.name = "Catppuccin"
 include(":app")
 include(":compose")
 include(":palette")
+include(":splashscreen")

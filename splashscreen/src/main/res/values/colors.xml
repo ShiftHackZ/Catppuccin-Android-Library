@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="catppuccin_splash_latte_background">#eff1f5</color>
+    <color name="catppuccin_splash_frappe_background">#303446</color>
+    <color name="catppuccin_splash_macchiato_background">#24273a</color>
+    <color name="catppuccin_splash_mocha_background">#1e1e2e</color>
+</resources>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.Catppuccin.Latte.SplashScreen" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/catppuccin_splash_latte_background</item>
+    </style>
+
+    <style name="Theme.Catppuccin.Frappe.SplashScreen" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/catppuccin_splash_frappe_background</item>
+    </style>
+
+    <style name="Theme.Catppuccin.Macchiato.SplashScreen" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/catppuccin_splash_macchiato_background</item>
+    </style>
+
+    <style name="Theme.Catppuccin.Mocha.SplashScreen" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/catppuccin_splash_mocha_background</item>
+    </style>
+</resources>
