@@ -49,6 +49,8 @@ android {
 }
 
 dependencies {
+    implementation(project(":palette"))
+    implementation(project(":palette-legacy"))
     implementation(project(":compose"))
     implementation(project(":splashscreen"))
 

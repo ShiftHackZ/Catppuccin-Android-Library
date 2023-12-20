@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="catppuccin_frappe_rosewater">#f2d5cf</color>
+    <color name="catppuccin_frappe_flamingo">#eebebe</color>
+    <color name="catppuccin_frappe_pink">#f4b8e4</color>
+    <color name="catppuccin_frappe_mauve">#ca9ee6</color>
+    <color name="catppuccin_frappe_red">#e78284</color>
+    <color name="catppuccin_frappe_maroon">#ea999c</color>
+    <color name="catppuccin_frappe_peach">#ef9f76</color>
+    <color name="catppuccin_frappe_yellow">#e5c890</color>
+    <color name="catppuccin_frappe_green">#a6d189</color>
+    <color name="catppuccin_frappe_teal">#81c8be</color>
+    <color name="catppuccin_frappe_sky">#99d1db</color>
+    <color name="catppuccin_frappe_sapphire">#85c1dc</color>
+    <color name="catppuccin_frappe_blue">#8caaee</color>
+    <color name="catppuccin_frappe_lavender">#babbf1</color>
+    <color name="catppuccin_frappe_text">#c6d0f5</color>
+    <color name="catppuccin_frappe_sub_text_1">#b5bfe2</color>
+    <color name="catppuccin_frappe_sub_text_0">#a5adce</color>
+    <color name="catppuccin_frappe_overlay_2">#949cbb</color>
+    <color name="catppuccin_frappe_overlay_1">#838ba7</color>
+    <color name="catppuccin_frappe_overlay_0">#737994</color>
+    <color name="catppuccin_frappe_surface_2">#626880</color>
+    <color name="catppuccin_frappe_surface_1">#51576d</color>
+    <color name="catppuccin_frappe_surface_0">#414559</color>
+    <color name="catppuccin_frappe_base">#303446</color>
+    <color name="catppuccin_frappe_mantle">#292c3c</color>
+    <color name="catppuccin_frappe_crust">#232634</color>
+</resources>
