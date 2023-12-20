@@ -45,6 +45,7 @@ Then add all or only needed library module dependencies to your module level bui
 ```
 dependencies {
     implementation 'com.github.ShiftHackZ.Catppuccin-Android-Library:palette:<VERSION>'
+    implementation 'com.github.ShiftHackZ.Catppuccin-Android-Library:palette-legacy:<VERSION>'
     implementation 'com.github.ShiftHackZ.Catppuccin-Android-Library:compose:<VERSION>'
     implementation 'com.github.ShiftHackZ.Catppuccin-Android-Library:splashscreen:<VERSION>'
 }
@@ -52,10 +53,28 @@ dependencies {
 
 ### Palette
 
-Implements Catppuccin color palette: Catppuccin.Latte, Catppuccin.Frappe, Catppuccin.Macchiato, Catppuccin.Mocha.
+Implements Catppuccin color compose palette: 
+- Catppuccin.Latte
+- Catppuccin.Frappe
+- Catppuccin.Macchiato
+- Catppuccin.Mocha
 
 ```
 implementation 'com.github.ShiftHackZ.Catppuccin-Android-Library:palette:<VERSION>'
+```
+
+### Palette Legacy
+
+**Available since version 0.1.1**
+
+Implements Catppuccin color palette as xml resources and static colors that can be accessed without context:
+- CatppuccinLegacy.Latte
+- CatppuccinLegacy.Frappe
+- CatppuccinLegacy.Macchiato
+- CatppuccinLegacy.Mocha
+
+```
+implementation 'com.github.ShiftHackZ.Catppuccin-Android-Library:palette-legacy:<VERSION>'
 ```
 
 ### Compose
@@ -93,6 +112,40 @@ fun RedText(text: String) {
         color = color,
     )
 }
+```
+
+### Palette Legacy
+
+To access a color in XML or programatically with context, use `catppuccin_<flavor>_<color>`:
+
+```xml
+<View
+    android:color="@color/catppuccin_frappe_sub_text_1"
+    />
+```
+
+```xml
+<View
+    android:color="@color/catppuccin_frappe_red"
+    />
+```
+
+Or you can access it with context like this:
+
+```kotlin
+import com.shifthackz.catppuccin.palette.legacy.R as CatppuccinRes
+
+...
+val color = ContextCompat.getColor(context, CatppuccinRes.catppuccin_frappe_red)
+...
+
+```
+
+In case you need a color represented as Int value (or simply don't want to use context) 
+you can access the color by call `CatppuccinLegacy.<Flavor>.<color>`:
+
+```kotlin
+val color = CatppuccinLegacy.Frappe.red
 ```
 
 ### Compose material themes
