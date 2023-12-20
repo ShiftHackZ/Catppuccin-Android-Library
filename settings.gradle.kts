@@ -17,3 +17,4 @@ rootProject.name = "Catppuccin"
 include(":app")
 include(":compose")
 include(":palette")
+include(":splashscreen")
