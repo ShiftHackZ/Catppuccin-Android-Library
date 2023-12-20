@@ -1,5 +1,5 @@
 [versions]
-catppuccin = "0.1.1"
+catppuccin = "0.1.2"
 activityCompose = "1.8.2"
 androidGradlePlugin = "8.2.0"
 kotlin = "1.9.10"
