@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.org.jetbrains.kotlin.android)
     alias(libs.plugins.android.library)
+    `maven-publish`
 }
 
 android {
@@ -23,12 +24,18 @@ android {
             )
         }
     }
+    publishing {
+        singleVariant("release") {
+            withSourcesJar()
+            withJavadocJar()
+        }
+    }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "17"
     }
     buildFeatures {
         compose = true
@@ -42,4 +49,18 @@ dependencies {
     api(project(":palette"))
     implementation(libs.androidx.compose.material3)
     implementation(libs.androidx.core.ktx)
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            create<MavenPublication>("release") {
+                groupId = "com.shifthackz.catppuccin"
+                artifactId = "compose"
+                version = libs.versions.catppuccin.get()
+
+                from(components["release"])
+            }
+        }
+    }
 }
