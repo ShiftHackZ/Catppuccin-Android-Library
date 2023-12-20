@@ -31,6 +31,7 @@ class CatppuccinActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        actionBar?.hide()
         val viewModel: CatppuccinViewModel by viewModels()
         setContent {
             val uiState by viewModel.uiState.collectAsStateWithLifecycle()

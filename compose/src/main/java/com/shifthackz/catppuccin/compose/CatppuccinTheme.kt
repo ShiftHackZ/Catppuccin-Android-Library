@@ -109,7 +109,6 @@ object CatppuccinTheme {
         if (!view.isInEditMode) {
             SideEffect {
                 val window = (view.context as Activity).window
-//                val statusBarColor = colorScheme.background.toArgb()
                 val statusBarColor = colorScheme.surface.toArgb()
                 window.statusBarColor = statusBarColor
                 WindowCompat

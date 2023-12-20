@@ -176,7 +176,7 @@ fun ColorComposable(
     Box(
         modifier = modifier
             .background(
-                color = if (selected) palette.Subtext1.copy(alpha = 0.7f) else Color.Transparent,
+                color = if (selected) color.copy(alpha = 0.4f) else Color.Transparent,
                 shape = CircleShape,
             )
             .clickable { onClick(color, token) }
