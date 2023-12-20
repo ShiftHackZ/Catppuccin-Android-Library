@@ -4,6 +4,14 @@ package com.shifthackz.catppuccin.palette
 
 import androidx.compose.ui.graphics.Color
 
+/**
+ * Interface contract that determines all available **Catppuccin** color labels.
+ *
+ * @see <a href="https://github.com/catppuccin/catppuccin#-palette">Catppuccin Palette</a>
+ *
+ * @author ShiftHackZ
+ * @since  0.0.1
+ */
 interface CatppuccinPalette {
     val Rosewater: Color
     val Flamingo: Color

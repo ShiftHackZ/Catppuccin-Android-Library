@@ -4,8 +4,25 @@ package com.shifthackz.catppuccin.palette
 
 import androidx.compose.ui.graphics.Color
 
+/**
+ * **Catppuccin** is a community-driven pastel theme that aims to be the middle ground between low
+ * and high contrast themes.
+ *
+ * @see <a href="https://github.com/catppuccin/catppuccin">Catppuccin</a>
+ *
+ * @author ShiftHackZ
+ * @since  0.0.1
+ */
 object Catppuccin {
 
+    /**
+     * **Catppuccin Latte** flavor color palette.
+     *
+     * @see <a href="https://github.com/catppuccin/catppuccin#-palette">Catppuccin Palette</a>
+     *
+     * @author ShiftHackZ
+     * @since  0.0.1
+     */
     object Latte : CatppuccinPalette {
         override val Rosewater: Color = Color(0xffdc8a78)
         override val Flamingo: Color = Color(0xffdd7878)
@@ -35,6 +52,14 @@ object Catppuccin {
         override val Crust: Color = Color(0xffdce0e8)
     }
 
+    /**
+     * **Catppuccin Frappe** flavor color palette.
+     *
+     * @see <a href="https://github.com/catppuccin/catppuccin#-palette">Catppuccin Palette</a>
+     *
+     * @author ShiftHackZ
+     * @since  0.0.1
+     */
     object Frappe : CatppuccinPalette {
         override val Rosewater: Color = Color(0xfff2d5cf)
         override val Flamingo: Color = Color(0xffeebebe)
@@ -64,6 +89,14 @@ object Catppuccin {
         override val Crust: Color = Color(0xff232634)
     }
 
+    /**
+     * **Catppuccin Macchiato** flavor color palette.
+     *
+     * @see <a href="https://github.com/catppuccin/catppuccin#-palette">Catppuccin Palette</a>
+     *
+     * @author ShiftHackZ
+     * @since  0.0.1
+     */
     object Macchiato : CatppuccinPalette {
         override val Rosewater: Color = Color(0xfff4dbd6)
         override val Flamingo: Color = Color(0xfff0c6c6)
@@ -93,6 +126,14 @@ object Catppuccin {
         override val Crust: Color = Color(0xff181926)
     }
 
+    /**
+     * **Catppuccin Mocha** flavor color palette.
+     *
+     * @see <a href="https://github.com/catppuccin/catppuccin#-palette">Catppuccin Palette</a>
+     *
+     * @author ShiftHackZ
+     * @since  0.0.1
+     */
     object Mocha : CatppuccinPalette {
         override val Rosewater: Color = Color(0xfff5e0dc)
         override val Flamingo: Color = Color(0xfff2cdcd)
@@ -122,6 +163,20 @@ object Catppuccin {
         override val Crust: Color = Color(0xff11111b)
     }
 
+    /**
+     * Returns the collection of all available **Catppuccin** palette flavors.
+     *
+     * @return Collection of [CatppuccinPalette] flavors.
+     *
+     * @see [Catppuccin.Latte]
+     * @see [Catppuccin.Frappe]
+     * @see [Catppuccin.Macchiato]
+     * @see [Catppuccin.Mocha]
+     * @see <a href="https://github.com/catppuccin/catppuccin#-palette">Catppuccin Palette</a>
+     *
+     * @author ShiftHackZ
+     * @since  0.0.1
+     */
     fun values(): List<CatppuccinPalette> = listOf(
         Latte,
         Frappe,
