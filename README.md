@@ -24,14 +24,32 @@ Catppuccin Android Library provides a fast and easy way for Android Developers t
 
 The library is divided into separate modules, so you can implement only those that you need in your app for certain feature implementation.
 
+To implement this library, add jitpack.io repository in your project level build.gradle:
+
+```
+buildscript {
+    repositories {
+        maven { setUrl("https://jitpack.io") }
+    }
+}
+```
+
+Then add all or only needed library module dependencies to your module level build gradle:
+
+```
+dependencies {
+    implementation 'com.github.ShiftHackZ.Catppuccin-Android-Library:palette:<VERSION>'
+    implementation 'com.github.ShiftHackZ.Catppuccin-Android-Library:compose:<VERSION>'
+    implementation 'com.github.ShiftHackZ.Catppuccin-Android-Library:splashscreen:<VERSION>'
+}
+```
+
 ### Palette
 
 Implements Catppuccin color palette: Catppuccin.Latte, Catppuccin.Frappe, Catppuccin.Macchiato, Catppuccin.Mocha.
 
 ```
-dependencies {
-    implementation 'com.github.ShiftHackZ.Catppuccin-Android-Library:palette:<VERSION>'
-}
+implementation 'com.github.ShiftHackZ.Catppuccin-Android-Library:palette:<VERSION>'
 ```
 
 ### Compose
@@ -39,9 +57,7 @@ dependencies {
 Implements Android Jetpack Compose Catppuccin material themes.
 
 ```
-dependencies {
-    implementation 'com.github.ShiftHackZ.Catppuccin-Android-Library:compose:<VERSION>'
-}
+implementation 'com.github.ShiftHackZ.Catppuccin-Android-Library:compose:<VERSION>'
 ```
 
 ### Splashscreen
@@ -53,9 +69,7 @@ Implements basic XML themes for `androidx.core.core-splashscreen` library:
 - Theme.Catppuccin.Mocha.SplashScreen
 
 ```
-dependencies {
-    implementation 'com.github.ShiftHackZ.Catppuccin-Android-Library:splashscreen:<VERSION>'
-}
+implementation 'com.github.ShiftHackZ.Catppuccin-Android-Library:splashscreen:<VERSION>'
 ```
 
 ## Examples
@@ -77,10 +91,92 @@ fun RedText(text: String) {
 
 ### Compose material themes
 
+#### Themes overview
+
 To pick needed theme form Catppuccin material themes call `CatppuccinTheme.<Theme>`, there are 3 available themes:
-- CatppuccinTheme.DarkLightPalette
-- CatppuccinTheme.
-- CatppuccinTheme.
+- `CatppuccinTheme.DarkLightPalette` - takes two Catppuccin Paletes for dark and light mode and handles theming.
+- `CatppuccinTheme.Palette` - takes Catpuccin Palette and handles theming.
+- `CatppuccinTheme.Custom` - allows to define theme with fully custom ColorScheme, Typography, Shapes.
+
+To theme the whole application, you can follow this example code in your Activity:
+
+```kotlin
+class CatppuccinActivity : ComponentActivity() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContent {
+            CatppuccinTheme.Palette(
+                palette = Catppuccin.Frappe,
+            ) {
+                 // Put your composable content here.
+            }
+        }
+    }
+}
+```
+
+#### Theme Palette customization
+
+There is a quick way to customize theme palette with certain main material colors (primary, secondary, etc).
+
+For this purpose construct your palette by call `CatppuccinMaterial.<Flavor>()`, for example:
+
+```kotlin
+class CatppuccinActivity : ComponentActivity() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContent {
+            CatppuccinTheme.Palette(
+                palette = CatppuccinMaterial.Frappe(
+                    primary = Catppuccin.Frappe.Blue,
+                    secondary = Catppuccin.Frappe.Lavender,
+                )
+            ) {
+                 // Put your composable content here.
+            }
+        }
+    }
+}
+```
+
+### Splashscreen
+
+The splashscreen module implements basic Catppuccin styles to theme `androidx.core.core-splashscreen` library. 
+
+Core splashscreen documentation can be found here: [https://developer.android.com/develop/ui/views/launch/splash-screen](https://developer.android.com/develop/ui/views/launch/splash-screen)
+
+To define your custom your custom Splash theme, you can set as a parent `Theme.Catppuccin.<Flavor>.SplashScreen`, there are 4 themes available:
+- Theme.Catppuccin.Latte.SplashScreen
+- Theme.Catppuccin.Frappe.SplashScreen
+- Theme.Catppuccin.Macchiato.SplashScreen
+- Theme.Catppuccin.Mocha.SplashScreen
+
+Example of SplashTheme:
+
+```xml
+<style name="Theme.App.Starting" parent="Theme.Catppuccin.Frappe.SplashScreen">
+    <item name="windowSplashScreenAnimatedIcon">@drawable/catppuccin</item>
+    <item name="windowSplashScreenAnimationDuration">500</item>
+    <item name="postSplashScreenTheme">@style/Theme.Catppuccin</item>
+</style>
+```
+
+Then define this theme in `android:theme` attribute in AndroidManifest.xml inside <application> or <activity> tag, for example:
+
+```xml
+...
+<application
+    ...
+    android:theme="@style/Theme.Catppuccin.Splash">
+    ...
+</application>
+...
+```
+
+
+<br><br><br>
 
 <p align="center"><img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true" /></p>
 <p align="center">Copyright &copy; 2023-present <a href="https://moroz.cc" target="_blank">Dmitriy Moroz</a>, <a href="https://github.com/catppuccin" target="_blank">Catppuccin Org</a>
