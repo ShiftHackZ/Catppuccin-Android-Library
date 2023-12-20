@@ -22,6 +22,8 @@ Catppuccin Android Library provides a fast and easy way for Android Developers t
 
 ## Library structure
 
+The library is divided into separate modules, so you can implement only those that you need in your app for certain feature implementation.
+
 ### Palette
 
 Implements Catppuccin color palette: Catppuccin.Latte, Catppuccin.Frappe, Catppuccin.Macchiato, Catppuccin.Mocha.
@@ -55,6 +57,30 @@ dependencies {
     implementation 'com.github.ShiftHackZ.Catppuccin-Android-Library:splashscreen:<VERSION>'
 }
 ```
+
+## Examples
+
+### Palette
+
+To pick needed color from the Catppuccin Palette call `Catppuccin.<Flavor>.<Color>`, for example:
+
+```kotlin
+@Composable
+fun RedText(text: String) {
+    val color = Catppuccin.Frappe.Red
+    Text(
+        text = text,
+        color = color,
+    )
+}
+```
+
+### Compose material themes
+
+To pick needed theme form Catppuccin material themes call `CatppuccinTheme.<Theme>`, there are 3 available themes:
+- CatppuccinTheme.DarkLightPalette
+- CatppuccinTheme.
+- CatppuccinTheme.
 
 <p align="center"><img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true" /></p>
 <p align="center">Copyright &copy; 2023-present <a href="https://moroz.cc" target="_blank">Dmitriy Moroz</a>, <a href="https://github.com/catppuccin" target="_blank">Catppuccin Org</a>
