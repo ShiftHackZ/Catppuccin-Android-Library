@@ -20,6 +20,12 @@
 Catppuccin Android Library provides a fast and easy way for Android Developers to implement <a href="https://github.com/catppuccin/catppuccin">Catppuccin</a> pastel theme in Android Applications.
 </p>
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/ShiftHackZ/Catppuccin-Android-Library/main/docs/assets/catppuccin1.png" width="200" />
+  <img src="https://raw.githubusercontent.com/ShiftHackZ/Catppuccin-Android-Library/main/docs/assets/catppuccin2.png" width="200" />
+  <img src="https://raw.githubusercontent.com/ShiftHackZ/Catppuccin-Android-Library/main/docs/assets/catppuccin3.png" width="200" />	
+</p>
+
 ## Library structure
 
 The library is divided into separate modules, so you can implement only those that you need in your app for certain feature implementation.
