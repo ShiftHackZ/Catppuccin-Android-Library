@@ -1,8 +1,8 @@
 <h3 align="center">
-	<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/logos/exports/1544x1544_circle.png" width="100" alt="Logo"/><br/>
-	<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/misc/transparent.png" height="30" width="0px"/>
-	Catppuccin Android Library
-	<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/misc/transparent.png" height="30" width="0px"/>
+  <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/logos/exports/1544x1544_circle.png" width="100" alt="Logo"/><br/>
+  <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/misc/transparent.png" height="30" width="0px"/>
+  Catppuccin Android Library
+  <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/misc/transparent.png" height="30" width="0px"/>
 </h3>
 
 <p align="center">
@@ -11,9 +11,9 @@
 
 
 <p align="center">
-<a href="https://jitpack.io/#ShiftHackZ/Catppuccin-Android-Library">
-  <img src="https://jitpack.io/v/ShiftHackZ/Catppuccin-Android-Library.svg" />
-</a>
+  <a href="https://jitpack.io/#ShiftHackZ/Catppuccin-Android-Library">
+    <img src="https://jitpack.io/v/ShiftHackZ/Catppuccin-Android-Library.svg" />
+  </a>
 </p>
 
 <p align="center">
@@ -21,12 +21,12 @@ Catppuccin Android Library provides a fast and easy way for Android Developers t
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ShiftHackZ/Catppuccin-Android-Library/main/docs/assets/catppuccin1.png" width="200" />
-  <img src="https://raw.githubusercontent.com/ShiftHackZ/Catppuccin-Android-Library/main/docs/assets/catppuccin2.png" width="200" />
-  <img src="https://raw.githubusercontent.com/ShiftHackZ/Catppuccin-Android-Library/main/docs/assets/catppuccin3.png" width="200" />	
+  <img src="https://raw.githubusercontent.com/ShiftHackZ/Catppuccin-Android-Library/main/docs/assets/catppuccin1.png" width="220" />
+  <img src="https://raw.githubusercontent.com/ShiftHackZ/Catppuccin-Android-Library/main/docs/assets/catppuccin2.png" width="220" />
+  <img src="https://raw.githubusercontent.com/ShiftHackZ/Catppuccin-Android-Library/main/docs/assets/catppuccin3.png" width="220" />	
 </p>
 
-## Library structure
+## 💭 Library structure
 
 The library is divided into separate modules, so you can implement only those that you need in your app for certain feature implementation.
 
@@ -78,7 +78,7 @@ Implements basic XML themes for `androidx.core.core-splashscreen` library:
 implementation 'com.github.ShiftHackZ.Catppuccin-Android-Library:splashscreen:<VERSION>'
 ```
 
-## Examples
+## 👾 Examples
 
 ### Palette
 
@@ -180,6 +180,10 @@ Then define this theme in `android:theme` attribute in AndroidManifest.xml insid
 </application>
 ...
 ```
+
+### ❤️ Gratitude
+
+Thanks to the [Catppuccin community](https://github.com/catppuccin/catppuccin) for this amazing soothing pastel theme which is the only theme that is pleasant to my eyes.
 
 
 <br><br><br>
