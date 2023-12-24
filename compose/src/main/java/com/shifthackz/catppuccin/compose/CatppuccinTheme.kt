@@ -11,6 +11,7 @@ import androidx.compose.material3.Shapes
 import androidx.compose.material3.Typography
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.SideEffect
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalView
 import androidx.core.graphics.luminance
@@ -90,6 +91,7 @@ object CatppuccinTheme {
      * @param colorScheme A complete definition of the Material Color theme for this hierarchy.
      * @param typography A set of text styles to be used as this hierarchy's typography system.
      * @param shapes A set of corner shapes to be used as this hierarchy's shape system.
+     * @param statusBarColor A color to paint status bar with, by default uses surface theme color.
      * @param isAppearanceLightStatusBars If true, changes the foreground color of the status bars
      * to light so that the items on the bar can be read clearly.
      * @param content Child composable UI to theme.
@@ -102,6 +104,7 @@ object CatppuccinTheme {
         colorScheme: ColorScheme = Catppuccin.Latte.colorScheme(),
         typography: Typography = Catppuccin.Latte.typography(),
         shapes: Shapes = MaterialTheme.shapes,
+        statusBarColor: Color = colorScheme.surface,
         isAppearanceLightStatusBars: Boolean,
         content: @Composable () -> Unit,
     ) {
@@ -109,8 +112,7 @@ object CatppuccinTheme {
         if (!view.isInEditMode) {
             SideEffect {
                 val window = (view.context as Activity).window
-                val statusBarColor = colorScheme.surface.toArgb()
-                window.statusBarColor = statusBarColor
+                window.statusBarColor = statusBarColor.toArgb()
                 WindowCompat
                     .getInsetsController(window, view)
                     .isAppearanceLightStatusBars = isAppearanceLightStatusBars
