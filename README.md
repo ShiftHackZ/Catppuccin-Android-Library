@@ -21,9 +21,9 @@ Catppuccin Android Library provides a fast and easy way for Android Developers t
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ShiftHackZ/Catppuccin-Android-Library/main/docs/assets/catppuccin1.png" width="220" />
-  <img src="https://raw.githubusercontent.com/ShiftHackZ/Catppuccin-Android-Library/main/docs/assets/catppuccin2.png" width="220" />
-  <img src="https://raw.githubusercontent.com/ShiftHackZ/Catppuccin-Android-Library/main/docs/assets/catppuccin3.png" width="220" />	
+  <img src="https://raw.githubusercontent.com/ShiftHackZ/Catppuccin-Android-Library/main/fastlane/metadata/android/en-US/images/phoneScreenshots/1.png" width="220" />
+  <img src="https://raw.githubusercontent.com/ShiftHackZ/Catppuccin-Android-Library/main/fastlane/metadata/android/en-US/images/phoneScreenshots/2.png" width="220" />
+  <img src="https://raw.githubusercontent.com/ShiftHackZ/Catppuccin-Android-Library/main/fastlane/metadata/android/en-US/images/phoneScreenshots/3.png" width="220" />	
 </p>
 
 ## 💭 Library structure
